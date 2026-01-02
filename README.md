@@ -16,7 +16,7 @@ This is a temporary "under construction" curtain page for **JurisCreators Group*
 ## 🏗️ Architecture
 
 **Technology Stack:**
-- Pure HTML5 + CSS3 (no build process)
+- HTML5 + Tailwind CSS (via CDN, no build process)
 - Static site deployment
 - Netlify hosting
 

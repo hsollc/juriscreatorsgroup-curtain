@@ -3,139 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JurisCreators Group - Under Construction</title>
     
-    <!-- SEO Protection: Prevent indexing of temporary curtain page -->
+    <!-- 
+        CRITICAL SEO PROTECTION (Expert Review #1)
+        - noindex, nofollow: Prevents search engines from indexing this temporary curtain
+        - canonical: Tells search engines this is the authoritative URL
+        - Purpose: Avoids SEO competition with main site (juriscreators.com)
+    -->
     <meta name="robots" content="noindex, nofollow">
-    
-    <!-- Canonical URL -->
     <link rel="canonical" href="https://juriscreatorsgroup.com/">
     
-    <!-- Favicon from main site -->
+    <!-- 
+        BASIC META TAGS
+        - Description for browser/social context (even though noindex prevents crawling)
+        - Keywords for internal documentation
+    -->
+    <meta name="description" content="JurisCreators Group - Korean-English Bilingual Legal Services Platform Under Development">
+    <meta name="keywords" content="legal services, Korean, English, bilingual, law firm, JCG PC">
+    
+    <!-- 
+        FAVICON (Expert Review #2)
+        - Links to main site's favicon for brand consistency
+        - Prevents browser from showing default empty icon
+        - Maintains JCG brand identity across all touchpoints
+    -->
     <link rel="icon" type="image/x-icon" href="https://juriscreators.com/static/images/favicon.ico">
     <link rel="shortcut icon" type="image/x-icon" href="https://juriscreators.com/static/images/favicon.ico">
     
+    <title>JurisCreators Group - Coming Soon</title>
+    
+    <!-- 
+        TAILWIND CSS (CDN)
+        - Using CDN for simplicity (no build process needed)
+        - Appropriate for single-page curtain site
+        - 99.9% uptime reliability from Tailwind CDN
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        /* 
+            CUSTOM STYLES
+            - Gradient background for premium legal aesthetic
+            - System font stack for optimal cross-platform rendering
+        */
+        body { 
             background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            margin: 0;
-            text-align: center;
-            overflow: hidden;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
         }
         
-        .container {
-            padding: 40px;
-            border-radius: 15px;
-            background: rgba(0, 0, 0, 0.2);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            max-width: 600px;
-            width: 90%;
-            animation: fadeIn 1s ease-in;
-        }
-        
+        /* 
+            FADE-IN ANIMATION
+            - Subtle entrance effect (0.8s duration)
+            - Professional, not distracting
+            - Improves perceived performance
+        */
         @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        .icon {
-            font-size: 60px;
-            margin-bottom: 20px;
+        .fade-in {
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        /* 
+            PULSE ANIMATION (Construction Icon)
+            - Gentle scale effect (2s loop)
+            - Draws attention to "under construction" status
+            - Infinite loop keeps page feeling "alive"
+        */
+        .construction-icon {
             animation: pulse 2s ease-in-out infinite;
         }
         
         @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            line-height: 1.6;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info {
-            font-size: 0.9rem;
-            margin-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            padding-top: 20px;
-        }
-        
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px solid white;
-            border-radius: 5px;
-            color: white;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .button:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            p {
-                font-size: 1rem;
-            }
-            
-            .container {
-                padding: 30px 20px;
-            }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="icon">🏗️</div>
-        <h1>JurisCreators Group</h1>
-        <h2 style="font-size: 1.5rem; margin-bottom: 15px; font-weight: 400;">Platform Upgrade</h2>
-        <p>Our legal services portal is being upgraded for 2026.<br>We will return shortly.</p>
-        <a href="https://juriscreators.com" class="button">Visit Main Site</a>
-        <p class="contact-info">
-            Contact: <a href="mailto:info@juriscreators.com" style="color: white; text-decoration: underline;">info@juriscreators.com</a>
-        </p>
-    </div>
+
+<body class="min-h-screen flex items-center justify-center text-white px-4">
+    <!-- 
+        SEMANTIC HTML
+        - <main> for accessibility (screen readers)
+        - Centered vertically and horizontally
+        - Max-width for optimal reading on large screens
+    -->
+    <main class="max-w-3xl mx-auto text-center fade-in">
+        
+        <!-- 
+            CONSTRUCTION ICON
+            - role="img" for accessibility
+            - aria-label provides text alternative for screen readers
+            - Pulsing animation defined in CSS above
+        -->
+        <div class="text-8xl md:text-9xl mb-8 construction-icon" role="img" aria-label="Under construction">
+            🏗️
+        </div>
+        
+        <!-- 
+            MAIN HEADING
+            - Responsive text sizing (4xl → 5xl → 6xl)
+            - Drop shadow for depth/premium feel
+        -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 drop-shadow-2xl">
+            JurisCreators Group
+        </h1>
+        
+        <!-- 
+            DESCRIPTION SECTION
+            - Two-paragraph structure for clarity
+            - Slightly reduced opacity for visual hierarchy
+        -->
+        <div class="text-lg md:text-xl lg:text-2xl mb-8 space-y-4">
+            <p class="leading-relaxed opacity-95">
+                Our group platform is currently under development.
+            </p>
+            <p class="leading-relaxed opacity-95">
+                We are integrating our professional legal services into a comprehensive online ecosystem.
+            </p>
+        </div>
+        
+        <!-- 
+            CALL TO ACTION (CTA)
+            - Primary action: redirect to main site
+            - Button design: high contrast, clear affordance
+            - Hover effects: scale + shadow for interactive feedback
+            - Focus state: accessibility for keyboard navigation
+        -->
+        <div class="mb-10">
+            <p class="text-base md:text-lg mb-5 opacity-90">
+                For immediate legal assistance, please visit our main portal:
+            </p>
+            <a href="https://juriscreators.com" 
+               class="inline-block bg-white text-blue-900 font-bold text-lg md:text-xl px-8 md:px-10 py-3 md:py-4 rounded-xl shadow-2xl hover:scale-105 hover:shadow-3xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-white/50"
+               aria-label="Visit our main website at JurisCreators.com">
+                Visit JurisCreators.com →
+            </a>
+        </div>
+        
+        <!-- 
+            VISUAL DIVIDER
+            - Subtle border for section separation
+            - 20% opacity white for elegance
+        -->
+        <hr class="my-10 border-t border-white/20" />
+        
+        <!-- 
+            CONTACT INFORMATION
+            - <address> for semantic HTML
+            - not-italic: removes default italic styling
+            - Email link with hover effect
+        -->
+        <address class="not-italic space-y-3 text-sm md:text-base opacity-80">
+            <p class="font-semibold text-lg">JCG, PC (법무법인(유한)로하나JCG)</p>
+            <p>Korean-English Bilingual Legal Services</p>
+            <p>Online Virtual Law Hub</p>
+            <p>
+                Contact: 
+                <a href="mailto:info@juriscreators.com" 
+                   class="underline hover:text-blue-200 transition-colors font-semibold focus:outline-none focus:ring-2 focus:ring-white/50 rounded">
+                    info@juriscreators.com
+                </a>
+            </p>
+        </address>
+        
+        <!-- 
+            FOOTER
+            - CRITICAL: Timeline says "2026" NOT "Q1 2026" (Expert Review #3)
+            - Protects reputation if launch timeline slips
+            - Copyright notice for legal protection
+        -->
+        <footer class="mt-12 text-sm opacity-60">
+            <p>Expected Launch: 2026</p>
+            <p class="mt-2">© 2026 JCG PC. All rights reserved.</p>
+        </footer>
+        
+    </main>
 </body>
 </html>
-
