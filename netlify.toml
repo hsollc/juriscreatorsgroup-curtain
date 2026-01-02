@@ -1,0 +1,25 @@
+# Netlify Configuration for JurisCreatorsGroup Curtain
+
+[build]
+  # No build command needed (static HTML)
+  publish = "/"
+  
+[build.environment]
+  # No environment variables needed
+
+[[redirects]]
+  # Redirect www to non-www
+  from = "https://www.juriscreatorsgroup.com/*"
+  to = "https://juriscreatorsgroup.com/:splat"
+  status = 301
+  force = true
+
+[[headers]]
+  # Security headers for all pages
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
