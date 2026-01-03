@@ -1,1 +1,506 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Protection -->
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="canonical" href="https://juriscreatorsgroup.com/">
+    
+    <meta name="description" content="JurisCreators Group - Korean-English Bilingual Legal Services Platform Under Development">
+    <meta name="keywords" content="legal services, Korean, English, bilingual, law firm, JCG PC">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://juriscreators.com/static/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://juriscreators.com/static/images/favicon.ico">
+    
+    <title>JurisCreators Group - System Renovation</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #000000;
+            color: #FFFFFF;
+        }
+        
+        .navbar {
+            background-color: darkblue !important; /* same as base.html */
+        }
+        
+        .navbar-brand {
+            border: 2px solid #FFFFFF;
+            padding: 5px 10px;
+            background-color: #006400; /* darkgreen */
+            border-radius: 5px;
+            color: #FFFFFF !important;
+            text-decoration: none;
+        }
+        
+        .main-content {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 120px 40px 80px;
+        }
+        
+        .renovation-message {
+            max-width: 1000px;
+            width: 100%;
+            padding: 80px 60px;
+            background: linear-gradient(135deg, rgba(0, 0, 128, 0.15) 0%, rgba(0, 0, 0, 0.3) 100%);
+            border-radius: 0;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .renovation-message::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+        }
+        
+        .renovation-message h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            margin-bottom: 50px;
+            color: #FFFFFF;
+            text-align: left;
+            letter-spacing: 2px;
+            line-height: 1.2;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+        
+        .renovation-message .message-content {
+            text-align: left;
+            max-width: 850px;
+        }
+        
+        .renovation-message p {
+            font-size: 1.15rem;
+            line-height: 2;
+            color: #F0F0F0;
+            margin-bottom: 25px;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .renovation-message p:first-of-type {
+            font-size: 1.25rem;
+            color: #FFFFFF;
+            font-weight: 400;
+        }
+        
+        .accent-line {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+            margin-bottom: 40px;
+        }
+        
+        footer {
+            background-color: darkblue !important; /* same as navbar and base.html */
+            color: #FFFFFF !important;
+            padding: 25px 40px 20px;
+        }
+        
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .footer-content {
+            padding-left: 25px;
+            position: relative;
+            border-left: 4px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .footer-content::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.2) 100%);
+        }
+        
+        .footer-section {
+            margin-bottom: 18px;
+            padding-left: 0;
+        }
+        
+        .footer-section-title {
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 1.5px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .footer-accent-line {
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+            margin-bottom: 15px;
+            margin-left: 0;
+        }
+        
+        .footer-info {
+            font-size: 0.65rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.8);
+            padding-left: 0;
+            font-weight: 300;
+            letter-spacing: 0.2px;
+        }
+        
+        .footer-info p {
+            margin-bottom: 10px;
+        }
+        
+        .footer-info a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+        
+        .footer-info a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+        
+        .footer-info strong {
+            color: #FFFFFF;
+            font-weight: 500;
+        }
+        
+        .footer-title-section {
+            padding-left: 0;
+            margin-bottom: 15px;
+        }
+        
+        .footer-title-section a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #FFFFFF;
+            text-decoration: none;
+            line-height: 1.4;
+            display: inline-block;
+        }
+        
+        .footer-title-section a:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .footer-title-section .title-main {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 2px;
+        }
+        
+        .footer-title-section .title-sub {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.9);
+            display: block;
+        }
+        
+        .footer-title-section .title-phone {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #FFFFFF;
+            margin-left: 5px;
+        }
+        
+        .footer-map-container {
+            padding-left: 0;
+            margin: 12px 0;
+        }
+        
+        .footer-map-container iframe {
+            border-radius: 0;
+            border-left: 2px solid rgba(255, 255, 255, 0.2);
+            height: 40px;
+        }
+        
+        .social-icons {
+            margin-top: 15px;
+            padding-left: 0;
+        }
+        
+        .social-icons a {
+            margin-right: 12px;
+            display: inline-block;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0.75;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-2px);
+            opacity: 1;
+        }
+        
+        .social-icons i {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+        
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+            margin: 12px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 100px 20px 60px;
+            }
+            
+            .renovation-message {
+                padding: 50px 30px;
+            }
+            
+            .renovation-message h1 {
+                font-size: 2.5rem;
+                margin-bottom: 30px;
+            }
+            
+            .renovation-message p {
+                font-size: 1rem;
+                line-height: 1.8;
+            }
+            
+            .accent-line {
+                width: 60px;
+                margin-bottom: 30px;
+            }
+            
+            footer {
+                padding: 20px 15px 15px;
+            }
+            
+            .footer-content {
+                padding-left: 20px;
+                border-left: 3px solid rgba(255, 255, 255, 0.25);
+            }
+            
+            .footer-content::before {
+                width: 3px;
+            }
+            
+            .footer-section {
+                padding-left: 0;
+                margin-bottom: 12px;
+            }
+            
+            .footer-info {
+                padding-left: 0;
+                font-size: 0.6rem;
+            }
+            
+            .footer-accent-line {
+                margin-left: 0;
+                width: 40px;
+            }
+            
+            .footer-map-container {
+                padding-left: 0;
+                margin: 10px 0;
+            }
+            
+            .footer-title-section {
+                padding-left: 0;
+            }
+            
+            .social-icons {
+                padding-left: 0;
+            }
+            
+            .footer-title-section .title-main {
+                font-size: 0.9rem;
+            }
+            
+            .footer-title-section .title-sub {
+                font-size: 0.65rem;
+            }
+            
+            .footer-title-section .title-phone {
+                font-size: 0.8rem;
+            }
+            
+            .social-icons {
+                padding-left: 0;
+                margin-top: 12px;
+            }
+            
+            .social-icons i {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" style="background-color: darkblue !important; color: #FFFFFF !important;">
+        <div class="container">
+            <a href="https://juriscreators.com" 
+               target="_blank" 
+               style="text-decoration: none;">
+                <img src="https://juriscreators.com/static/attorney/imgs/JCG_Logo.png" 
+                     alt="JCG LOGO" 
+                     class="logo" 
+                     style="width: 80px; height: 66.7px; display: block; margin: 0 auto;">
+                <span style="display: block; text-align: center; font-size: 6.7px; font-weight: bold; color: white;">
+                    JURIS CREATORS GROUP
+                </span>
+            </a>
+            <a class="navbar-brand" href="/">
+                <span style="font-size: 22px; font-weight: bold;">JCG, PC</span><br>
+                <span style="font-size: 7px;">Attorney-Client 온라인상담/회의전용</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse align-items-center" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item" style="border: 2px solid #FFFFFF; padding: 5px 10px; margin-right: 10px; background-color: #000080; border-radius: 5px;">
+                        <a class="nav-link" href="https://juriscreators.com/articles/home/" style="color: #FFFFFF !important; font-weight: bold !important; text-decoration: none;">
+                            <span style="font-size: 16px; font-weight: bold;">JCG, PC</span><br>
+                            <span style="font-size: 7px;">법무법인(유한)로하나JCG</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="renovation-message">
+            <div class="accent-line"></div>
+            <h1>JurisCreators Group</h1>
+            <div class="message-content">
+                <p>
+                    We are in the process of renovation of overall system of JCG and please understand that we are under construction which will take a time, but we will get back to all of you in a more innovative and professional JurisCreators Group.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-success section" style="background-color: darkblue !important; color: #FFFFFF !important;">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-accent-line"></div>
+                
+                <!-- Footer Information -->
+                <div class="footer-section">
+                    <div class="footer-info">
+                        <p>
+                            Legal Service Provider: JCG, PC-법무법인(유한)로하나JCG 서울 강남구 영동대로 602 6층 사업자 등록 514-85-30408<br>
+                            Tel(대표): 82-2-1551-2755 Email: juriscreators@gmail.com<br>
+                            Site Managing Company: HSOLLC Consulting Inc. 사업자 등록 583-87-00035 Email: hsollclaw@gmail.com<br>
+                            <a href="https://juriscreators.com/private_policy_and_terms_of_service/">Privacy Policy and Terms of Service</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <!-- Essential Title Section -->
+                <div class="footer-title-section">
+                    <a href="tel:15512755">
+                        <span class="title-main">JCG, PC- Online Oriented Legal Service</span>
+                        <span class="title-sub">법무법인(유한)로하나JCG</span>
+                        <span class="title-phone">1551-2755</span>
+                    </a>
+                </div>
+                
+                <div class="footer-map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6324.33205210573!2d126.97002179357908!3d37.57470800000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3231a5e2247%3A0xb71ee2c9878b5aeb!2z642U7LyA7J207Yq47JyI7YOA7JuMQuuPmQ!5e0!3m2!1sen!2skr!4v1713487800123!5m2!1sen!2skr" 
+                        width="100%" 
+                        max-width="750" 
+                        height="50" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="footer-section">
+                    <div class="footer-info">
+                        <p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=서울+종로구+종로1길+50+K-Twin+빌딩+B동" target="_blank">
+                                <strong>PopUp Premier Conference Suite:</strong> 
+                                서울 종로구 종로1길 50 더케이트원타워 B동(K-Twin Tower B동) 2F 
+                                (VIP 대면회의 ONLY/사전 예약 필수)
+                            </a>
+                        </p>
+                        
+                        <p>
+                            <a href="https://www.google.com/maps/search/?api=1&query=서울+강남구+테헤란로+518+섬유센터빌딩" target="_blank">
+                                Nationwide & Worldwide: 서울 강남구 테헤란로 518 섬유센터빌딩 10F 
+                                (예비적-VIP 대면회의 only/사전 예약 필수) 등등
+                            </a>
+                        </p>
+                        
+                        <p>
+                            <a href="https://drive.google.com/file/d/1-5LLerPt5w-wMFVHH8rRnjvps1DeMF4y/view?usp=sharing" target="_blank">
+                                &reg; JURIS CREATORS GROUP
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-divider"></div>
+                
+                <!-- Social Media Icons -->
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UCW2GLwn49lAXLHozIYQe6fw" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/ksylawksycom" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/wwwlawksycom" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lawksy" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://blog.naver.com/PostView.naver?blogId=wwwlawksycom&logNo=223298242669" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-blog"></i>
+                    </a>
+                    <a href="https://pf.kakao.com/_cxlDPG/chat" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-comment"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
